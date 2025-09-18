@@ -2,40 +2,39 @@ const mongodb = require("../db/connect");
 const ObjectId = require("mongodb").ObjectId;
 
 const getAll = async (req, res) => {
-    //#swagger.tags = ['weapons']
-  const result = await mongodb
-    .getDb()
-    .db("personal_project")
-    .collection("weapons")
-    .find();
-  result.toArray(err, lists).then((weapons) => {
-    if (err) {
-      res.status(400).json({ message: err });
-    }
+  //#swagger.tags = ['weapons']
+  try {
+    const result = await mongodb
+      .getDb()
+      .db("personal_project")
+      .collection("weapons")
+      .find();
+    const weapons = await result.toArray();
     res.setHeader("Content-Type", "application/json");
     res.status(200).json(weapons);
-  });
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
 };
 
 const getSingle = async (req, res) => {
   if (!ObjectId.isValid(req.params.id)) {
-    res.status(400).json("Must use a valid weapon id to find a weapon.");
+    return res.status(400).json("Must use a valid weapon id to find a weapon.");
   }
-  
   //#swagger.tags = ['weapons']
-  const weaponsId = new ObjectId(req.params.id);
-  const result = await mongodb
-    .getDb()
-    .db("personal_project")
-    .collection("weapons")
-    .find({ _id: weaponsId });
-  result.toArray(err, lists).then((weapons) => {
-    if (err) {
-      res.status(400).json({ message: err });
-    }
+  try {
+    const weaponsId = new ObjectId(req.params.id);
+    const result = await mongodb
+      .getDb()
+      .db("personal_project")
+      .collection("weapons")
+      .find({ _id: weaponsId });
+    const weapons = await result.toArray();
     res.setHeader("Content-Type", "application/json");
     res.status(200).json(weapons[0]);
-  });
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
 };
 
 const createWeapon = async (req, res) => {
