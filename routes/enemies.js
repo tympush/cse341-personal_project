@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const weaponsController = require("../controllers/weapons");
+const enemiesController = require("../controllers/enemies");
 const validation = require("../middleware/validate");
 
 router.get("/", enemiesController.getAll);
