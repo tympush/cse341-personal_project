@@ -8,7 +8,10 @@ const getAll = async (req, res) => {
     .db("personal_project")
     .collection("weapons")
     .find();
-  result.toArray().then((weapons) => {
+  result.toArray(err, lists).then((weapons) => {
+    if (err) {
+      res.status(400).json({ message: err });
+    }
     res.setHeader("Content-Type", "application/json");
     res.status(200).json(weapons);
   });
@@ -26,7 +29,10 @@ const getSingle = async (req, res) => {
     .db("personal_project")
     .collection("weapons")
     .find({ _id: weaponsId });
-  result.toArray().then((weapons) => {
+  result.toArray(err, lists).then((weapons) => {
+    if (err) {
+      res.status(400).json({ message: err });
+    }
     res.setHeader("Content-Type", "application/json");
     res.status(200).json(weapons[0]);
   });
