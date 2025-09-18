@@ -25,6 +25,32 @@ const saveWeapon = (req, res, next) => {
     });
 };
 
+const saveEnemy = (req, res, next) => {
+    const validationRules = {
+        enemyName: 'required|string',
+        enemyRace: 'required|string',
+        enemyLevel: 'required|integer',
+        enemyDifficulty: 'required|string',
+        enemyHealth: 'required|integer',
+        enemyArmor: 'required|integer',
+        enemyDamage: 'required|integer',
+        enemyDescription: 'required|string'
+    };
+
+    validator(req.body, validationRules, {}, (err, status) => {
+        if (!status) {
+            res.status(412).json({
+                success: false,
+                message: 'Validation failed',
+                data: err
+            });
+        } else {
+            next();
+        }
+    });
+};
+
 module.exports = {
-    saveWeapon
+    saveWeapon,
+    saveEnemy
 };

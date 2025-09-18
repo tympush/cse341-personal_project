@@ -7,5 +7,6 @@ router.get("/", (req, res) => {
 });
 
 router.use("/weapons", require("./weapons"));
+router.use("/enemies", require("./enemies"));
 
 module.exports = router;

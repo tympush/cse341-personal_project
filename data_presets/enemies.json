@@ -1,0 +1,102 @@
+[
+    {
+      "enemyName": "Grimfang",
+      "enemyRace": "Werewolf",
+      "enemyLevel": 5,
+      "enemyDifficulty": "Medium",
+      "enemyHealth": 120,
+      "enemyArmor": 15,
+      "enemyDamage": 20,
+      "enemyDescription": "A feral beast that stalks moonlit forests, striking with razor claws."
+    },
+    {
+      "enemyName": "Ironhide Brute",
+      "enemyRace": "Orc",
+      "enemyLevel": 8,
+      "enemyDifficulty": "Hard",
+      "enemyHealth": 250,
+      "enemyArmor": 40,
+      "enemyDamage": 35,
+      "enemyDescription": "A massive warrior clad in crude armor, feared for its brute strength."
+    },
+    {
+      "enemyName": "Ashfang",
+      "enemyRace": "Fire Drake",
+      "enemyLevel": 12,
+      "enemyDifficulty": "Very Hard",
+      "enemyHealth": 400,
+      "enemyArmor": 30,
+      "enemyDamage": 55,
+      "enemyDescription": "A dragonkin that spews molten fire and scorches everything in its path."
+    },
+    {
+      "enemyName": "Shadow Wraith",
+      "enemyRace": "Undead Spirit",
+      "enemyLevel": 6,
+      "enemyDifficulty": "Medium",
+      "enemyHealth": 90,
+      "enemyArmor": 10,
+      "enemyDamage": 25,
+      "enemyDescription": "A ghostly figure that feeds on fear, striking from the darkness."
+    },
+    {
+      "enemyName": "Bonecrusher",
+      "enemyRace": "Ogre",
+      "enemyLevel": 10,
+      "enemyDifficulty": "Hard",
+      "enemyHealth": 300,
+      "enemyArmor": 25,
+      "enemyDamage": 45,
+      "enemyDescription": "A towering brute wielding a massive club capable of crushing bones in one swing."
+    },
+    {
+      "enemyName": "Venomfang",
+      "enemyRace": "Giant Spider",
+      "enemyLevel": 4,
+      "enemyDifficulty": "Easy",
+      "enemyHealth": 70,
+      "enemyArmor": 5,
+      "enemyDamage": 15,
+      "enemyDescription": "A venomous arachnid that ambushes prey with paralyzing bites."
+    },
+    {
+      "enemyName": "Frost Revenant",
+      "enemyRace": "Ice Elemental",
+      "enemyLevel": 9,
+      "enemyDifficulty": "Hard",
+      "enemyHealth": 200,
+      "enemyArmor": 35,
+      "enemyDamage": 30,
+      "enemyDescription": "A spirit bound by frost magic, capable of freezing its enemies solid."
+    },
+    {
+      "enemyName": "Blightcrawler",
+      "enemyRace": "Mutant Insect",
+      "enemyLevel": 7,
+      "enemyDifficulty": "Medium",
+      "enemyHealth": 150,
+      "enemyArmor": 20,
+      "enemyDamage": 22,
+      "enemyDescription": "A grotesque insect mutated by dark alchemy, dripping with corrosive toxins."
+    },
+    {
+      "enemyName": "Dread Knight",
+      "enemyRace": "Cursed Human",
+      "enemyLevel": 11,
+      "enemyDifficulty": "Very Hard",
+      "enemyHealth": 350,
+      "enemyArmor": 50,
+      "enemyDamage": 60,
+      "enemyDescription": "A fallen warrior clad in black steel, cursed to fight for eternity."
+    },
+    {
+      "enemyName": "Scorchwing",
+      "enemyRace": "Phoenix Spawn",
+      "enemyLevel": 13,
+      "enemyDifficulty": "Boss",
+      "enemyHealth": 500,
+      "enemyArmor": 45,
+      "enemyDamage": 70,
+      "enemyDescription": "A fiery bird of rebirth that unleashes searing flames upon its enemies."
+    }
+]
