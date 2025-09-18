@@ -6,7 +6,7 @@ const saveWeapon = (req, res, next) => {
         weaponType: 'required|string',
         rarity: 'required|string',
         damage: 'required|integer',
-        weight: 'required|float',
+        weight: 'required|numeric',
         durability: 'required|integer',
         effect: 'required|string',
         description: 'required|string'
