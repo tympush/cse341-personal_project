@@ -3,15 +3,16 @@ const router = express.Router();
 
 const enemiesController = require("../controllers/enemies");
 const validation = require("../middleware/validate");
+const { isAuthenticated } = require("../middleware/authenticate");
 
 router.get("/", enemiesController.getAll);
 
 router.get("/:id", enemiesController.getSingle);
 
-router.post("/", validation.saveEnemy, enemiesController.createEnemy);
+router.post("/", isAuthenticated, validation.saveEnemy, enemiesController.createEnemy);
 
-router.put("/:id", validation.saveEnemy, enemiesController.updateEnemy);
+router.put("/:id", isAuthenticated, validation.saveEnemy, enemiesController.updateEnemy);
 
-router.delete("/:id", enemiesController.deleteEnemy);
+router.delete("/:id", isAuthenticated, enemiesController.deleteEnemy);
 
 module.exports = router;
